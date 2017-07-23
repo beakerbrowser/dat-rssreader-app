@@ -49,6 +49,14 @@ function fixUrl (link, sourceOrigin) {
   if (link && link.href) {
     link = link.href
   }
+  // make sure the link is the dat address
+  if (!link.startsWith('dat://')) {
+    try {
+      var urlp = new URL(link)
+      link = urlp.pathname + urlp.hash
+    } catch (e) {}
+  }
+  // make sure the link has an origin
   if (link.startsWith('/')) {
     if (sourceOrigin.endsWith('/')) {
       return sourceOrigin + link.slice(1)
@@ -133,7 +141,6 @@ module.exports = (state, emitter) => {
       emitter.emit('add-source', 'dat://taravancil.com/index.xml')
       emitter.emit('add-source', 'dat://don-marti-dmarti.hashbase.io/feed.xml')
       emitter.emit('add-source', 'dat://tmcw.hashbase.io/rss.xml')
-      emitter.emit('add-source', 'dat://blog-rjsteinert.hashbase.io/feed.xml')
       emitter.emit('add-source', 'dat://simple-sengming.hashbase.io/rss.xml')
     }
   })
