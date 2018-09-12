@@ -4,5 +4,8 @@
   "description": "Read dat:// RSS feeds",
   "createdBy": {
     "url": "beaker://shell-window"
+  },
+  "experimental": {
+    "apis": ["globalFetch"]
   }
 }
