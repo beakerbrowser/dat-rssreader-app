@@ -4,5 +4,8 @@
   "description": "Read dat:// RSS feeds",
   "type": [
     "application"
-  ]
+  ],
+  "experimental": {
+    "apis": ["globalFetch"]
+  }
 }
