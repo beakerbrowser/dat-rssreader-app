@@ -2,7 +2,10 @@
   "url": "dat://f7daadc2d624df738abbccc9955714d94cef656406f2a850bfc499c2080627d4/",
   "title": "RSS Reader",
   "description": "Read dat:// RSS feeds",
-  "createdBy": {
-    "url": "beaker://shell-window"
+  "type": [
+    "application"
+  ],
+  "experimental": {
+    "apis": ["globalFetch"]
   }
 }
