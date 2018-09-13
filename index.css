@@ -15,7 +15,7 @@
   flex: 0 0 120px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: pre;
+  white-space: nowrap;
 }
 .inbox .item .source a {
   color: #555;
